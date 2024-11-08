@@ -1,0 +1,13 @@
+.container {
+    margin-top: 20px;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  

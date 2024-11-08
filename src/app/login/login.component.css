@@ -1,0 +1,29 @@
+.login-container {
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #080D0D, #173B4D);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 35px;
+    width: 1000px;
+    height: 600px;
+    top: 140px;
+    left: 76px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .custom-input {
+    width: 274px;
+    height: 44px;
+    border: 1px solid #ccc; /* Adding border */
+    opacity: 1; /* Opacity set to visible */
+    border-radius: 4px; /* Optional: Add a rounded corner to match Bootstrap style */
+    margin-top: 10px; /* Optional: Add space between input fields */
+    background-color: #5B5B5B;
+}

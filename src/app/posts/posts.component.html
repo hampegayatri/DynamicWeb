@@ -1,0 +1,46 @@
+<div class="container">
+    <h2 class="text-center text-dark mt-5">Posts</h2>
+  
+    <!-- Loop through posts and display each in a card layout -->
+    <div class="row mt-4">
+      <div class="col-md-4 mt-3" *ngFor="let post of currentPosts">
+        <!-- Use 'h-100' for equal card height and 'd-flex' for flex layout -->
+        <div class="card mb-3 d-flex flex-column h-100">
+          <div class="card-body">
+            <!-- Display Post ID first, then Title -->
+            <h5 class="card-title">Post ID: {{ post.id }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ post.title }}</h6>
+  
+            <!-- View Details button -->
+            <button class="btn btn-primary mt-auto" (click)="viewDetails(post.id)">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Pagination Controls -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <!-- Previous button -->
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <button class="page-link" (click)="previousPage()">Previous</button>
+        </li>
+  
+        <!-- Dynamic Page Numbers -->
+        <li class="page-item" *ngFor="let page of pageNumbers">
+          <button class="page-link" (click)="goToPage(page)">{{ page }}</button>
+        </li>
+  
+        <!-- Next button -->
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
+          <button class="page-link" (click)="nextPage()">Next</button>
+        </li>
+      </ul>
+    </nav>
+  
+<!-- Logout Button (Positioned in the top-right corner) -->
+<div class="logout-btn">
+    <button class="btn btn-danger" (click)="logout()">Logout</button>
+  </div>
+</div>
+  

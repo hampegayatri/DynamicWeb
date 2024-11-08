@@ -1,0 +1,20 @@
+<div class="container">
+    <h2 class="text-center text-dark mt-5">Post Details</h2>
+    
+    <!-- Display Post details -->
+    <div *ngIf="post.id" class="d-flex justify-content-center">
+      <div class="card w-50 mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Post ID: {{ post.id }}</h5>
+          <h6 class="card-subtitle mb-2 mt-4 text-muted">{{ post.title }}</h6>
+          <p class="card-text">{{ post.body }}</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Show loading or error message if post is not available -->
+    <div *ngIf="!post.id" class="text-center">
+      <p>Loading post details...</p>
+    </div>
+  </div>
+  
